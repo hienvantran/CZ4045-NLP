@@ -19,4 +19,4 @@ Stats:
 Files:
 
 - final.csv: file with all data
-- data_to_label.csv: file for manual data labeling and testing
+- unalbeled-test-name: test data to label
