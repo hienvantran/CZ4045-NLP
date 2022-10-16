@@ -15,3 +15,8 @@ Stats:
 
 - 6509 posts with scoring more than 1 and 4000 posts with a score of < 1
 - Submitted time: 20/01/2019 to 11/10/2022
+
+Files:
+
+- final.csv: file with all data
+- data_to_label.csv: file for manual data labeling and testing
