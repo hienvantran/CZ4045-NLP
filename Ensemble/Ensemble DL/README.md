@@ -34,9 +34,10 @@ All the related files can be found under /FinBERT folder with structure:
     .
     ├── ...
     ├── Ensemble                        # Ensemble files
-    |   ├── results                     # Results files for Emsemble
-    |   |   └── Model serving           # Serving prediction
-    │   └── Ensemble.ipynb              # Notebook to run experiments for Ensemble
+    |   ├── Emsemble-DL                 # Results files for Emsemble - DL
+    |   |   ├── results                 # Results files for Emsemble
+    |   |       └── Model serving       # Serving prediction
+    |   └── Emsemble-ML                 # Results files for Emsemble - ML
     └── ...
 
 The model weights are stored in this link:

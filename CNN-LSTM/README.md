@@ -14,7 +14,7 @@ In our CNN model, we incorporate with GoogleNews-vectors-negative300 embedding a
 
 Long Short Term Memory networks – usually just called “LSTMs” – are a special kind of RNN, capable of learning long-term dependencies. LSTMs are explicitly designed to avoid the long-term dependency problem. The key to LSTMs is the cell state which acts as a conveyor belt. It’s very easy for information to just flow along it unchanged. The LSTM does have the ability to remove or add information to the cell state, carefully regulated by structures called gates. Gates are a way to optionally let information through.
 
-In our LSTM model, we incorporate with Embedding and then CNN layer to obtain important features of text through pooling followed by a Bi-LSTM layer to obtain context information.
+In our LSTM model, we incorporate with Embedding and a Bi-LSTM layer to obtain context information.
 
 ## Data
 
@@ -24,8 +24,6 @@ Data used in this experiment are:
 - Self-labelled crawlled Reddit dataset: 2047 samples (a.k.a. Reddit dataset)
 - Remaining crawlled Reddit dataset: 8409 samples (a.k.a. Serving dataset)
 - Combination of Financial Phrase Bank dataset and Reddit dataset (a.k.a. Combined dataset)
-
-The preprocessing is done using the Bert tokenizer itself so we don't need to do further modifications.
 
 ## Training and evaluation
 
@@ -56,7 +54,7 @@ The results for 4 models are below:
 
 - Model 4 - Combined dataset: {'accuracy': 0.78, 'f1': 0.78, 'precision': 0.77, 'recall': 0.79}
 
-### CNN-LSTM
+### LSTM
 
 The results for 4 models are below:
 
@@ -70,12 +68,12 @@ The results for 4 models are below:
 
 ## Evaluation
 
-For both CNN and CNN-LSTM, model 3 has better performance than model 2 on the same dataset and model 4 has outperformed model 3 with a similar distribution dataset. We can conclude that:
+For both CNN and LSTM, model 3 has better performance than model 2 on the same dataset and model 4 has outperformed model 3 with a similar distribution dataset. We can conclude that:
 
 - Transfer learning from pretrained model on larger dataset (Kaggle) is able to increase performance.
 - More data helps model to learn more information and increase the results.
 
-Compared between CNN and CNN-LSTM, unexpectedly, CNN perform slightly better than the latter. This result may be due to the CNN-LSTM is overfitting the training data and hence less generalzing well on test set.
+Compared between CNN and LSTM, unexpectedly, CNN perform slightly better than the latter. This result may be due to the LSTM is overfitting the training data and hence less generalzing well on test set.
 
 Therefore, for serving data, we will consider CNN model 4 as our optimal models to predict. We still report all models predictions as reference.
 
@@ -88,15 +86,15 @@ All the related files can be found under /FinBERT folder with structure:
     ├── CNN-LSTM                        # CNN-LSTM files
     │   ├── CNN                         # Results files for CNN
     |   |  └── Model serving            # Serving prediction
-    |   ├── CNN-LSTM                    # Results files for CNN
+    |   ├── LSTM                        # Results files for LSTM
     |   |   └── Model serving           # Serving prediction
-    │   └── CNN-LSTM.ipynb              # Notebook to run experiments for both CNN and CNN-LSTM
+    │   └── CNN-LSTM.ipynb              # Notebook to run experiments for both CNN and LSTM
     └── ...
 
 The model weights are stored in this link:
 
 - CNN: <https://entuedu-my.sharepoint.com/:f:/g/personal/hienvan001_e_ntu_edu_sg/Emivh-dmWbdJk-daSCf8CDQBqmmMqnovL9sIlrcbYZGVwQ?e=ncBUuv>
-- CNN-LSTM: <https://entuedu-my.sharepoint.com/:f:/g/personal/hienvan001_e_ntu_edu_sg/Elfb8DyTYLhJuNr95kEZh5gB3OpKeRmmUxszNmv0i8OaUA?e=ZcsrgA>
+- LSTM: <https://entuedu-my.sharepoint.com/:f:/g/personal/hienvan001_e_ntu_edu_sg/Elfb8DyTYLhJuNr95kEZh5gB3OpKeRmmUxszNmv0i8OaUA?e=ZcsrgA>
 
 ## References
 
