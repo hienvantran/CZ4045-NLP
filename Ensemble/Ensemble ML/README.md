@@ -1,8 +1,8 @@
-# Sentiment analysis with CNN-LSTM-BERT
+# Ensemble ML
 
 ## What are ensemble learning method
 
-We use 3 ML models RandomForestClassifier, SVC and LogisticRegression(random_state = 1, max_iter = 200) to perform prediction for our Reddit dataset. For ensembling method, we make use of AdaBoostClassifier with base_estimator is DecisionTreeClassifier to get the final prediction.
+We use 3 ML models RandomForestClassifier, SVC and LogisticRegression to perform prediction for our Reddit dataset. For ensembling method, we make use of AdaBoostClassifier with base_estimator is DecisionTreeClassifier to get the final prediction.
 
 ## Data
 

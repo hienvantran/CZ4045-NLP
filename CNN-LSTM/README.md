@@ -85,9 +85,9 @@ All the related files can be found under /FinBERT folder with structure:
     ├── ...
     ├── CNN-LSTM                        # CNN-LSTM files
     │   ├── CNN                         # Results files for CNN
-    |   |  └── Model serving            # Serving prediction
+    |   |  └── Results                  # Training and serving prediction
     |   ├── LSTM                        # Results files for LSTM
-    |   |   └── Model serving           # Serving prediction
+    |   |   └── Results                 # Training and serving prediction
     │   └── CNN-LSTM.ipynb              # Notebook to run experiments for both CNN and LSTM
     └── ...
 
